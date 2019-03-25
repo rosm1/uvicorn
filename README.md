@@ -1,3 +1,31 @@
+
+    ...
+    ...
+app = App()
+if __name__ == "__main__":
+if __name__ == "__main__":
+    uvicorn.run(App, host="127.0.0.1", port=5000, log_level="info", reload=True)
+    uvicorn.run(app, host="127.0.0.1", port=5000, log_level="info", reload=True)
+```
+```
+
+
+The set of configuration options is the same as for the command line tool.
+The set of configuration options is the same as for the command line tool.
+@@ -230,15 +232,15 @@ For local development with https, it's possible to use [mkcert][mkcert]
+to gebash
+$ uvicorn app:App --port 5000 --ssl-keyfile=./key.pem --ssl-certfile=./cert.pem
+$ uvicorn example:app --port 5000 --ssl-keyfile=./key.pem --ssl-certfile=./cert.pem
+```
+```
+
+
+### Running gunicorn worker
+### Running gunicorn worker
+
+
+It also possible to use certificnerate a valid certificate and private key.
+to generate a valid certificate and private key.
 @@ -32,32 +32,29 @@ Install using `pip`:
 $ pip install uvicorn
 $ pip install uvicorn
@@ -120,3 +148,6 @@ $ gunicorn --keyfile=./key.pem --certfile=./cert.pem -k uvicorn.workers.UvicornW
 
 
 [letsencrypt]: https://letsencrypt.org/
+
+```bash
+```
